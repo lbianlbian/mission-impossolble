@@ -1,6 +1,6 @@
 var solanaWeb3 = require("@solana/web3.js");
 var connection = new solanaWeb3.Connection("https://api.devnet.solana.com");
-var keypair = solanaWeb3.Keypair.fromSecretKey(Buffer.from([13,178,215,2,222,55,45,17,80,23,85,52,121,199,111,30,157,16,77,156,208,73,102,114,158,239,250,64,174,65,6,120,176,206,233,129,121,145,8,49,226,248,167,104,161,121,4,182,184,163,82,246,177,99,72,43,103,213,99,69,221,141,175,227]))
+var keypair = xxxxxxx;
 
 async function sendTx(){
     var msg = "instructions are bundled";
