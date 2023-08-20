@@ -1,0 +1,61 @@
+html {
+    background-image: url("newestbackg.jpg");
+    /*background-color: black;*/
+}
+body {
+    color: white;
+    font-family: monospace;
+}
+img {
+    height: 20%;
+}
+#navbarright {
+    float: right;
+    margin: 3%;
+    font-size: 150%;
+}
+#navbarright:hover{
+    background-color: purple;
+}
+h1{
+    font-size: 600%;
+}
+h2{
+    font-size: 300%;
+}
+h3{
+    font-size: 200%;
+}
+p{
+    font-size: 150%;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+.examples{
+    width: 80%;
+    height: auto;
+}
+button{
+    font-size: 300%;
+    padding: 1%;
+    border-radius: 20px;
+    background-color: purple;
+    color: white;
+    font-family: monospace;
+    margin: 2%;
+}
+button:hover{
+    background-color: green;
+}
+#world{
+    width: 60%;
+    height: auto;
+}

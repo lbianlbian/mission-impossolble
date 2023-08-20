@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title> Mission 4 </title><link rel = "stylesheet" href = "style.css"/>
+        <link rel="icon" type="image/x-icon" href="newlogo.png">
+        <script src = "script.js"> </script>
+        <script> 
+            window.addEventListener("load", () => genMultChoice('EVILORG', 'BADGUYS', 'MWAHAHA', 'tx.html', 'We were unable to find any trace of The Mini Entity in the hands of this organization.'));
+        </script>
+    </head>
+    <body onload = "genNavBar()">
+        <center>
+            <h2> Congratulations! Thanks to your investigation, the IMF destroyed the supercomputer that powered The Entity. 
+                However, a secret organization is believed to have transferred a smaller version of The Entity to a second computer. 
+                This new AI is called The Mini Entity. 
+                This secret organization gives orders via transactions on the Solana blockchain. 
+            </h2>
+            <img src = "explosion.jpg" id = "world" />
+            <h3> Addresses interact with the Solana blockchain by sending or being a part of transactions. </h3>
+            <p> Each transaction has a signature made up of various letters and numbers, and a timestamp of when it succeeds.</p>
+            <h3> To get all transactions for which an address was involved in, use the following data in a POST call with the same headers and URL as the previous missions. </h3>
+            <img src = "txhistpay.png" class = "examples" />
+            <h3> The response will look like this: </h3>
+            <img src = "txhistresp.png" class = "examples" />
+            <h3> The transaction containing the order given by this secret organization involves the address CxfQnuAbZ5fLcGueVjwAL7FcuFhu23CCetkj1ijWJEpJ</h3>
+            <h3> Which secret organization has The Mini Entity? </h3>
+            <div id = "multChoice"> </div>
+        </center>
+    </body>
+</html>

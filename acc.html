@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> Mission 3 </title>
+        <link rel = "stylesheet" href = "style.css"/>
+        <link rel="icon" type="image/x-icon" href="newlogo.png">
+        <script src = "script.js"> </script>
+        <script> 
+            window.addEventListener("load", () => genMultChoice('23N 14W', '127N 62W', '12N 178W', 'txhist.html', 'We went to this location and were unable to find the supercomputer.'));
+        </script>
+    </head>
+    <body onload = "genNavBar()">
+        <center>
+            <h2> Congratulations! 
+                After interrogating Nat Inter, the IMF found out that The Entity's source code is stored on a supercomputer.
+                The coordinates of this supercomputer are stored on the Solana blockchain.
+            </h2>
+            <img src = "world.jpg" id = "world" />
+            <h3> On the Solana blockchain, data is stored in accounts. Accounts on Solana are like files on a computer. </h3>
+            <p> Every file on a computer has a filename. Every account on Solana has an address.</p>
+            <p> Every file on a computer has a filesize. Every account on Solana has an account size. </p>
+            <p> Files on a computer and accounts on Solana both store data in bytes, which can be represented as a number between 0 and 255. </p>
+            <h3> Solana accounts have unique traits as well. </h3>
+            <p> Accounts on Solana have a balance of SOL. </p>
+            <p> Solana accounts are owned by on-chain programs. The program determines how data is stored in the account and how users can interact with it.</p>
+            <p> In fact, when getting the USDC-Dev balance in the previous mission, you were reading data stored in an account. </p>
+            <h3> The location of the supercomputer is stored in the account with an address of 3WUo5THnH21vCbuYmMTgvqMHDgYvLQm4KDKRkRFwUCuo, in the 10th and 11th bytes. The 10th byte gives degrees of latitude, and the 11th byte gives degrees of longitude. </h3>
+            <h3> To get the data of a Solana account, include this body in a POST call to the same URL with the same header as in the previous missions.</h3>
+            <img src = "accpay.png" class = "examples" />
+            <h3> The response will look like this: </h3>
+            <img src = "accresp.png" class = "examples" />
+            <p> You can use this site: <a href = "https://cryptii.com/pipes/base64-to-hex" target = "_blank"> https://cryptii.com/pipes/base64-to-hex </a> or your programming language of choice to turn a base64 string into a list of numbers between 0 and 255. Remember to convert from hexadecimal to decimal!</p>
+            <h3> Where is the supercomputer that holds The Entity's source code?</h3>
+            <div id = "multChoice"></div>
+        </center> 
+    </body>
+</html>

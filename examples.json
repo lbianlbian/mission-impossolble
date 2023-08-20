@@ -1,0 +1,143 @@
+get balance call
+{
+	id: any random integer,
+	jsonrpc: "2.0",
+	method: "getBalance",
+	params: [ address you wish to query as a string ]
+}
+get balance response
+{
+	jsonrpc: "2.0",
+	result: { 
+		context: unimportant information here, 
+		value: balance of this address, in lamports 
+	},
+ 	id: the id you gave when making the call
+}
+
+get token balance call
+{
+	jsonrpc: "2.0",
+	id: any random integer,
+	method: "getTokenAccountsByOwner",
+	params: [
+		address of the owner of the tokens,
+		{
+			mint: mint address to filter by
+		},
+		{
+			encoding: "jsonParsed"
+		}
+	]
+}
+get token balance response
+{
+	jsonrpc: "2.0",
+	id: the id you gave when making the call,
+	result: {
+		value: [
+			{
+				account: {
+					data: {
+						parsed: {
+							info: {
+								tokenAmount: {
+									uiAmountString: the amount of this token owned
+								},
+								mint: the mint address of this token
+						}
+					}
+				},
+				pubkey: address of the associated token account. This will be explained in the next mission.
+			}
+		]
+	}
+}
+
+get acc data payload
+{
+    jsonrpc: "2.0",
+    id: random integer,
+    method: "getAccountInfo",
+    params: [
+    	address of the account,
+	{
+		encoding: "base64" (other options may not work in some cases)
+	}
+    ]
+}
+get acc data resp
+{
+	jsonrpc: "2.0",
+	id: the id given in the POST call
+	result: {
+		value: {
+			data: [
+				the data in this account as a base64 string,
+		  		"base64"
+			],
+			executable: whether or not this account is a program,
+			lamports: amount of SOL owned by this account in lamports,
+			owner: address of the program that owns this account,
+			space: the number of bytes in this account's data
+			rentEpoch: will be explained in a future mission
+		}
+	}
+}
+
+get tx hist payload
+{
+    jsonrpc: "2.0",
+    id: random integer,
+    method: "getSignaturesForAddress",
+    params: [address to query here]
+}
+get tx hist resp
+{
+	jsonrpc: "2.0",
+	id: the id given in the POST call
+	result: [
+		{
+		err: null/nonexistent if this transaction had no errors,
+		memo: message sent with the transaction, null if none were sent,
+		signature: long string of letters and numbers, unique identifier associated with this transaction,
+		blockTime: unix timestamp of this transaction (unix timestamp means seconds since January 1st 1970 UTC)
+		}, 
+		... more transactions involving this address, up to 1000, ordered from most recent to oldest
+	]
+}
+
+get tx info payload
+{
+    jsonrpc: "2.0",
+    id: random integer,
+    method: "getTransaction",
+    params: [transaction signature to query, "json"]
+}
+get tx info resp
+{
+	jsonrpc: "2.0",
+	id: random integer,
+	result: {
+		transaction: {
+			message: {
+				accountKeys: list of strings of account addresses involved in this transaction,
+				instructions: [
+					{
+						accounts: [
+							number that is the index in accountKeys for this account,
+							for example 2 would mean,
+							the address at this position in this instruction is accountKeys[2]
+						],
+						data: base 58 encoded string of additional data in this instruction,
+						programIdIndex: index in accountKeys of program to which this instruction was sent
+					},
+					... additional instructions
+				]
+			},
+		},
+		signatures: [
+			signature of this transaction
+		]
+	}
+}

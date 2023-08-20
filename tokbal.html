@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title> Mission 2 </title>
+        <link rel = "stylesheet" href = "style.css"/>
+        <link rel="icon" type="image/x-icon" href="newlogo.png">
+        <script src = "script.js"> </script>
+        <script> 
+            window.addEventListener("load", () => genMultChoice('Nat Inter', 'Smith Wesson', 'Miss Sile', 'acc.html', 'We captured and interrogated this suspect, and have determined that this suspect was not the seller.'));
+        </script>
+    </head>
+    <body onload = "genNavBar()">
+        <center>
+            <h2> Congratulations! 
+                After interrogating Armie Dealer, the IMF (Impossible Mission Force) found out that The Entity also purchased a launch system from an unknown seller. 
+                This time, it paid 130,000 USDC-Dev, a Solana SPL token.
+            </h2>
+            <img src = "interrogation.jpg" />
+            <h3>Again, here is a list of suspected sellers and their Solana addresses:</h3>
+            <p>Miss Sile: <b> 2vWzzDts9Ndzao2ktnyRq1tc9o82um9ti4Kk5Y5ziZ69</b>></p>
+            <p> Smith Wesson: <b> 5WiqUxXHhvFEGSTzFsdK8GuZUjVF6aq7RPLiDBQH65d1 </b></p>
+            <p>Nat Inter: <b>2Gqjosh4saBRQwNAz7APn2UtnQXMfZa23ZyMggbbZCQD </b> </p>
+            <h3> On Solana, every SPL token has its own unique mint address. </h3>
+            <h3> USDC-Dev has a mint address of Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr </h3>
+            <h3> Make a POST call like you did in the last mission, with the same URL and headers. Include this in the body. </h3>
+            <img src = "tokbalpay.png" class = "examples" />
+            <h3> The response will look like this. The actual response has a lot more in it, but the below only includes the essential information.</h3>
+            <img src = "tokbalresp.png" class = "examples" />
+            <h3> Who sold the missile launch system to The Entity? The seller will have more than 130,000 USDC-Dev</h3>
+            <div id = "multChoice"></div>
+        </center>
+    </body>
+</html>

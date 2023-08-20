@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> Mission 1</title>
+        <link rel = "stylesheet" href = "style.css"/>
+        <link rel="icon" type="image/x-icon" href="newlogo.png">
+        <script src = "script.js"> </script>
+        <script> 
+            window.addEventListener("load", () => genMultChoice('Armie Dealer', 'Nat Inter', 'Miss Sile', 'tokbal.html', 'We captured and interrogated this suspect, and have determined that this suspect was not the seller.'));
+        </script>
+    </head>
+    <body onload = "genNavBar()">
+        <center>
+            <h2> Are you ready for your first mission?</h2>
+            <img src = "entity.webp" alt = "The Entity">
+            <h3> The Entity is an AI supercomputer gone rogue, intent on destroying the world. You will need to use your knowledge of the Solana blockchain to stop it before it's too late. </h3> 
+            <h3>The Entity plans on acquiring nuclear missiles. We've intercepted the following message from The Entity to an unknown international arms dealer:</h3>
+            <p> I will pay 40 SOL for the safe delivery of the stolen nuclear missile. </p>
+            <h3>We have a list of suspected sellers and their Solana addresses:</h3>
+            <p>Nat Inter: <b>2Gqjosh4saBRQwNAz7APn2UtnQXMfZa23ZyMggbbZCQD </b> </p>
+            <p>Miss Sile: <b> 2vWzzDts9Ndzao2ktnyRq1tc9o82um9ti4Kk5Y5ziZ69</b>></p>
+            <p>Armie Dealer: <b>B73uwarpYM72sZDJJjd8ALQaCHGB37BPRiaaiXPdNHvG</b></p>
+            
+            <h3> To see the balance of a solana address, you can use the following RPC endpoint (https://api.devnet.solana.com). </h3>
+            <h3> An RPC endpoint is your connection to the Solana devnet blockchain.</h3>
+            <h3> Using your programming language of choice, make a POST call to that RPC endpoint. Include the following in the body of the POST call:</h3>
+            <img src = "balpayload.png" class = "examples" />
+            <h3> And in the header: </h3>
+            <p> Content-Type: "application/json" </p>
+            <h3> You will receive the following response. </h3>
+            <img src = "balresp.png" class = "examples" />
+            <h3> 1 SOL = 1000000000 lamports.</h3>
+            <h3> Who sold a nuclear missile to The Entity? The seller will have over 40 SOL.</h3>
+            <div id = "multChoice"></div>
+        </center>
+    </body>
+</html>
